@@ -8,10 +8,6 @@ from services import auth_services
 User = get_user_model()
 
 
-# библиотека requests поддерживает специальный метод .json(),
-# позволяющий получить представление данных в виде объекта Python
-# после выполнения response.json() мы получаем словарь, который можно использовать так же,
-# как любой другой словарь в Python.
 class SignUpView(generic.TemplateView):
     """View для обработки данных пользователя для регистрации"""
     template_name = 'users/signup.html'

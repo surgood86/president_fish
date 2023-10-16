@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82ae647e-157f-431d-a552-4a1f5ea45cc9" name="Changes" comment="code optimization">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="82ae647e-157f-431d-a552-4a1f5ea45cc9" name="Changes" comment="code optimization" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -410,6 +405,7 @@
       <workItem from="1697388627658" duration="621000" />
       <workItem from="1697455149720" duration="609000" />
       <workItem from="1697459836965" duration="523000" />
+      <workItem from="1697460379433" duration="1133000" />
     </task>
     <task id="LOCAL-00001" summary="Site is working v1">
       <created>1667832761268</created>
