@@ -1,0 +1,84 @@
+{% extends 'users/base_for_auth.html' %}
+
+{% block title %}Восстановление пароля{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div id="formContainer" class="card-body">
+            <h5 class="card-title text-center">Восстановление пароля</h5>
+            <form class="form-signin" method="post" action="{% url 'password_reset' %}">
+              {% csrf_token %}
+              <div class="form-label-group">
+                <input type="text" id="phone_number" class="form-control" name="phone_number"
+                       placeholder="Номер телефона" required autofocus>
+                <label for="phone_number">Номер телефона</label>
+              </div>
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" id="getCode"
+                      type="button">Получить код по смс</button>
+              <hr class="my-4">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+  // Отправляет номер телефона во view и получает json ответ с формой для ввода кода из смс
+
+  var password_reset_url = "{% url 'password_reset' %}"
+
+  $(document).on("click", "#getCode", function(e) {
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: password_reset_url,
+      data: {
+        "phone_number": $("#phone_number").val(),
+      },
+      success: function(data) {
+        if (data.success) {
+          $("#formContainer").html(data.success);
+        } else {
+          alert(data.error);
+        }
+      },
+      error: function(data) {
+        alert("Упс, что-то пошло не так");
+      }
+    });
+  });
+</script>
+{% include 'users/scripts_for_code.html' %}
+<script>
+  // Отправляет в бекенд новый пароли и обрабатывает их ответы
+
+  $(document).on("click", "#confirmPassword", function(e) {
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: password_reset_url,
+      data: {
+        "phone_number": $("#hidden_phone_number").val(),
+        "password1": $("#password1").val(),
+        "password2": $("#password2").val(),
+      },
+      success: function(data) {
+        if (data.success_url) {
+          alert('Пароль успешно изменен');
+          window.location.href = data.success_url;
+        } else {
+          alert(data.error);
+        }
+      },
+      error: function(data) {
+        alert("Упс, что-то пошло не так");
+      }
+    });
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% if request.user.is_authenticated %}
+
+
+<li class="nav-item text-center btn btn-lg ">
+    <a class="nav-link" style="color: #1a1a1a"  href="{% url 'logout' %}">Выйти</a>
+</li>
+{% else %}
+<li class="nav-item text-center btn btn-lg">
+    <a class="nav-link" style="color: #1a1a1a"  href="{% url 'signin' %}">Войти</a>
+</li>
+<li class="nav-item text-center btn btn-lg">
+    <a class="nav-link" style="color: #1a1a1a"  href="{% url 'signup' %}">Зарегистрироваться</a>
+</li>
+
+{% endif %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+  <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="{% static 'product/css/style.css' %}">
+
+{% block title %}Products{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-3 d-none d-sm-block">
+            {% include 'products/sidebar.html' %}
+        </div>
+
+        <div class="col">
+            <h1 class="">{{ page_title }}</h1>
+            {% if basket and products %}
+            {% include 'order.html' %}
+            {% endif %}
+            <div class="">
+                <div class="">
+                    Сортировка:
+                    <form method="get" action="">
+                        <button id="priceFilter" class="btn btn-secondary btn-top-filter" name="top_filter_param"
+                                value="price_asc">По цене</button>
+                        <button id="nameFilter" class="btn btn-secondary btn-top-filter" name="top_filter_param"
+                                value="title_asc">По названию</button>
+                    </form>
+                </div>
+                <div class="product-list infinite-list">
+                    <div id="products_container" class="row">
+                    {% include 'products/products_cards.html' %}
+                    </div>
+                </div>
+                <form method="get" action="">
+                    {% csrf_token %}
+                    <button id="next_page" class="btn btn-secondary" name="page" value="2">
+                        Показать еще
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

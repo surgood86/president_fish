@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% for category in categories_list %}
+<h5>{{ category.title }}</h5>
+{% endfor %}

@@ -1,0 +1,143 @@
+<script>
+const current_url = "{{ request.path }}";
+const user_id = "{{ request.user.id }}";
+const products_container = $("#products_container");
+let filter_param_name = '';
+let filter_param_value = '';
+let top_filter_param = '';
+
+function ajaxRequest(type, url, data, successCallback, errorCallback) {
+    $.ajax({
+        type,
+        url,
+        data,
+        success: successCallback,
+        error: errorCallback,
+    });
+}
+
+$(document).on("click", "#sendOrderFormData", function(e) {
+    e.preventDefault();
+    ajaxRequest(
+        "POST",
+        current_url,
+        {
+            'order': 'order_this',
+            'date_and_time': $("#date_and_time").val(),
+            'phone_number': $("#phoneNumber").val(),
+            'notes': $("#notes").val(),
+        },
+        function(data) {
+            if (data.result) {
+                alert(data.result);
+                $("#sendOrderFormData").html("Заказан").css('background-color', 'red').prop('disabled', true);
+                $("#callOrderWindow").html("Заказан").css('background-color', 'red').prop('disabled', true);
+            } else {
+                alert(data.error);
+            }
+        },
+        function(data) {
+            alert("Упс, что-то пошло не так!");
+        }
+    );
+});
+
+$(document).on("click", ".basket-btn", function(e) {
+    e.preventDefault();
+    ajaxRequest(
+        "POST",
+        current_url,
+        {
+            'basket': 'basket',
+            'product_pk': this.value,
+            'user_pk': user_id,
+        },
+        function(data) {
+            $(data.btn_id).html(data.result);
+        },
+        function(data) {
+            alert('Для этого надо зарегистрироваться!');
+        }
+    );
+});
+
+$(".apply-filter-btn").click(function(e) {
+    e.preventDefault();
+    filter_param_name = this.name;
+    filter_param_value = this.value;
+
+    const isFilterActive = $(this).hasClass("filter-active");
+
+    if (isFilterActive) {
+        filter_param_value = '';
+    }
+
+    ajaxRequest(
+        "GET",
+        current_url,
+        {
+            'filter_btn_id': this.id,
+            'filter_param_name': filter_param_name,
+            'filter_param_value': filter_param_value,
+        },
+        function(data) {
+            products_container.html(data.result);
+            $(data.filter_btn_id).val(data.new_filter_param);
+            $("#next_page").attr('value', '2');
+            $(this).toggleClass("filter-active");
+        }.bind(this),
+        function(data) {
+            alert('Error');
+        }
+    );
+});
+
+$(".btn-top-filter").click(function(e) {
+    e.preventDefault();
+    top_filter_param = this.value;
+    ajaxRequest(
+        "GET",
+        current_url,
+        {
+            'top_filter_param': top_filter_param,
+            'filter_param_name': filter_param_name,
+            'filter_param_value': filter_param_value,
+        },
+        function(data) {
+            products_container.html(data.result);
+            $(data.btn_id).attr('value', data.change_val);
+            $("#next_page").attr('value', '2');
+        },
+        function(data) {
+            alert('Упс, что-то пошло не так, top_filter_param!');
+        }
+    );
+});
+
+$("#next_page").click(function(e) {
+    e.preventDefault();
+    ajaxRequest(
+        "GET",
+        current_url,
+        {
+            'page': this.value,
+            'top_filter_param': top_filter_param,
+            'filter_param_name': filter_param_name,
+            'filter_param_value': filter_param_value,
+        },
+        function(data) {
+            if(data.result && data.result.trim().length > 0) {
+                products_container.append(data.result);
+                $("#next_page").attr('value', data.next_page);
+            } else {
+                $("#next_page").attr('disabled', 'disabled').text('Товаров больше нет ;(');
+            }
+        },
+        function(data) {
+            alert('Error');
+        }
+    );
+});
+
+</script>
+

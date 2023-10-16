@@ -1,0 +1,57 @@
+  <script>
+  // Отправляет код с смс в бекенд, для подтверждения, при удаче меняет статус юзера на активный,
+  // иначе возвращает сообщение об ошибке
+  var confirm_url = "{% url 'confirm_code' %}"
+
+  $(document).on("click", "#confirmCode", function(e) {
+    e.preventDefault();
+    $.ajax ({
+      type: "POST",
+      url: confirm_url,
+      data: {
+        "code": $("#code").val(),
+        "phone_number": $("#hidden_phone_number").val(),
+        "purpose": $("#hidden_purpose").val(),
+      },
+      success: function(data) {
+        if (data.success) {
+          $("#formContainer").html(data.success);
+        } else if (data.success_url) {
+          alert("Вы успешно зарегистрировались");
+          window.location.href = data.success_url;
+        } else {
+          alert(data.error);
+        }
+      },
+      error: function(data) {
+        alert("Упс, что-то пошло не так!");
+      }
+    });
+  });
+  </script>
+  <script>
+  // Отправляет сообщения о повторной отправке кода юзеру
+
+  $(document).on("click", "#getCodeAgain", function(e) {
+    e.preventDefault();
+    $.ajax ({
+      type: "POST",
+      url: confirm_url,
+      data: {
+        "code": "again",
+        "phone_number": $("#hidden_phone_number").val(),
+        "purpose": $("#hidden_purpose").val(),
+      },
+      success: function(data) {
+        if (data.success) {
+          alert(data.success);
+        } else {
+          alert(data.error);
+        }
+      },
+      error: function(data) {
+        alert("Упс, что-то пошло не так");
+      }
+    });
+  });
+  </script>

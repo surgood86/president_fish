@@ -1,0 +1,45 @@
+{% load static %}
+
+
+<ul class="list-unstyled mb-0 py-3 pt-md-1 row align-items-start">
+    {% if manufacturers %}
+        <li class="mb-1">
+            <a class="btn btn-light py-0 text-start container-fluid" data-bs-toggle="collapse"
+               href="#manufacturersContainer" role="button" aria-expanded="false"
+               aria-controls="manufacturersContainer">Производители</a>
+            <div id="manufacturersContainer" class="collapse">
+                <ul class="list-unstyled fw-normal small">
+                    {% for manufacturer in manufacturers %}
+                        <li>
+                            <button class="btn apply-filter-btn container-fluid text-start" type="button"
+                                    name="manufacturer"
+                                    value="{{ manufacturer }}">{{ manufacturer }}</button>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </li>
+    {% endif %}
+    {% for title, eng_title, texts_and_btn in filters %}
+        <li class="mb-1">
+            <a class="btn btn-light py-1 text-start container-fluid" data-bs-toggle="collapse" href="#{{ eng_title }}"
+               role="button" aria-expanded="false" aria-controls="{{ eng_title }}">{{ title }}</a>
+            <div class="collapse py-1 px-2" id="{{ eng_title }}">
+                <ul class="list-unstyled fw-normal small">
+                    {% for text, filter_btn_id in texts_and_btn %}
+                        <li>
+                            <button id="{{ filter_btn_id }}" type="button"
+                                    class="my-1 apply-filter-btn text-start btn btn-outline-secondary container-fluid"
+                                    name="{{ title }}" value="{{ text }}" data-bs-toggle="button">
+                                {{ text }}
+                            </button>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </li>
+    {% endfor %}
+    {% if filters %}
+        <a class="col align-self-center" href="{{ request.path }}">Сбросить фильтр</a>
+    {% endif %}
+</ul>

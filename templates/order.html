@@ -1,0 +1,43 @@
+<div class="container-fluid row align-items-end">
+    <div class="col">
+        <button id="callOrderWindow" type="button" class="btn btn-primary"
+                data-bs-toggle="modal" data-bs-target="#makeOrderWindow">Заказать</button>
+    </div>
+</div>
+
+<div class="btn btn-lg modal fade" id="makeOrderWindow" tabindex="-1" aria-labelledby="makeOrderWindowLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="makeOrderWindowLabel">Оформить заказ</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                    <div class="col-12">
+                        <label class="form-label" for="date_and_time">Выберите время и дату, для звонка или оставьте
+                            поле пусты если хотите, чтобы вам позвонили в ближайшее возможное время</label>
+                        <input class="form-control" type="datetime-local" id="date_and_time" name="datetime">
+                    </div>
+                    <div class="col-12 needs-validation" novalidate>
+                        <label for="phoneNumber" class="form-label">Номер телефона</label>
+                        {% if request.user.is_authenticated %}
+                        <input required class="form-control" type="text" id="phoneNumber" value="{{ request.user.phone_number }}">
+                        {% else %}
+                        <input required class="form-control" type="text" id="phoneNumber">
+                        {% endif %}
+                    </div>
+                    <div class="col-12">
+
+                        <label for="notes" class="form-label">Примечания (Необязательно)</label>
+
+                        <textarea class="form-control" id="notes" rows="3"
+                        placeholder="Примечания"></textarea>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button id="sendOrderFormData" type="button" class="btn btn-primary">Заказать</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+            </div>
+        </div>
+    </div>
+</div>

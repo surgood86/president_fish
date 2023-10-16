@@ -1,0 +1,19 @@
+<div id="formContainer" class="card-body">
+    <h5 class="card-title text-center">Подтверждение</h5>
+    <form class="form-signin">
+        {% csrf_token %}
+        <input id="hidden_phone_number" type="hidden" name="phone_number" value="{{ phone_number }}">
+        <input id="hidden_purpose" type="hidden" name="purpose" value="{{ purpose }}">
+        <div class="form-label-group">
+            <input type="text" id="code" class="form-control" name="code"
+                   placeholder="Введите код с смс" required autofocus>
+            <label for="code">Введите код с смс</label>
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block text-uppercase" id="confirmCode"
+                type="button">Подтвердить</button>
+        <hr class="my-4">
+        <button class="btn btn-lg btn-outline-secondary btn-block text-uppercase" id="getCodeAgain"
+                type="button">Отправить код заново</button>
+    </form>
+</div>

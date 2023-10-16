@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Detail Product{% endblock %}
+
+{% block content %}
+
+
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Домашняя страница</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'category_detail' product.category.eng_title %}">
+                {{ product.category.title }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ product.title }}</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <h1>{{ product.title }}</h1>
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-4 row">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    {% if not product.productimages_set.first.image %}
+                                        <img src="{% static 'images/no-image_230x190.png' %}" loading="lazy"
+                                             class="img-fluid" alt="no-image">
+                                    {% else %}
+                                        <img src="{{ product.productimages_set.first.image.url }}" loading="lazy"
+                                             class="img-fluid" alt="{{ product.title }}">
+                                    {% endif %}
+                                </div>
+                                {% for image in remaining_images %}
+                                    <div class="carousel-item">
+                                        <img src="{{ image.image.url }}" class="img-fluid"alt="no-image">
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="col align-self-end">
+                            {% include 'basket.html' %}
+                        </div>
+                    </div>
+                    <div class="col">
+
+                        <div class="">
+                            {% for property in five_properties.all %}
+                                <dl class="dl-horizontal">
+                                    <dt>{{ property.title }}</dt>
+                                    <dd>{{ property.text }}</dd>
+                                </dl>
+                            {% endfor %}
+                        </div>
+                        {% include 'order.html' %}
+                    </div>
+                    <div class="col-sm-3 row">
+
+                        <div class="col align-self-start" style="color: red;">
+                            <h4> Цена: {{ product.price }} p. </h4>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-info-blocks">
+
+
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                            type="button" role="tab" aria-controls="nav-home" aria-selected="true">Описание
+                    </button>
+                    <button class="nav-link " id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                            type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Характеристики
+                    </button>
+                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                            type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Комплектация
+                    </button>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    {% for description in product.productdescriptions_set.all %}
+                        {% if description.title %}
+                            <h3>{{ description.title }}</h3>
+                        {% endif %}
+
+                        {% if description.text %}
+                            <p>{{ description.text }}</p>
+                        {% endif %}
+                    {% endfor %}</div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    {% for property in product.productproperties_set.all %}
+                        <dl>
+                            <dt>{{ property.title }}</dt>
+                            <dd>{{ property.text }}</dd>
+                        </dl>
+                    {% endfor %}</div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    {% for equipment in product.productequipments_set.all %}
+                        <dl>
+                            <dt>{{ equipment.title }}</dt>
+                            <dd>{{ equipment.text }}</dd>
+                        </dl>
+                    {% endfor %}</div>
+            </div>
+
+
+        </div>
+    </div>
+
+{% endblock %}

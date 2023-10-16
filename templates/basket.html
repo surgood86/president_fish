@@ -1,0 +1,7 @@
+{% if product.is_in_basket %}
+    <button id="{{ product.pk }}" class="btn basket-btn btn-secondary" name="basket" value="{{ product.eng_title }}">
+        Удалить из корзины</button>
+    {% else %}
+    <button id="{{ product.pk }}" class="btn basket-btn btn-secondary" name="basket" value="{{ product.eng_title }}">
+        Добавить в корзину</button>
+{% endif %}

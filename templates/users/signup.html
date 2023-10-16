@@ -1,0 +1,88 @@
+{% extends 'users/base_for_auth.html' %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div id="formContainer" class="card-body">
+            <h5 class="card-title text-center">Регистрация</h5>
+            <form class="form-signin">
+              {% csrf_token %}
+              <div class="form-label-group">
+                <input type="text" id="phone_number" class="form-control" name="phone_number"
+                       placeholder="Номер телефона" required autofocus>
+                <label for="phone_number">Номер телефона</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="text" id="first_name" class="form-control" name="first_name"
+                       placeholder="Ваше имя(необязательно)">
+                <label for="first_name">Ваше имя(необязательно)</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="text" id="last_name" class="form-control" name="last_name"
+                       placeholder="Ваша фамилия(необязательно)">
+                <label for="last_name">Ваша фамилия(необязательно)</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="password1" name="password1"
+                       class="form-control" placeholder="Пароль" required>
+                <label for="password1">Пароль</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="password2" name="password2"
+                       class="form-control" placeholder="Подтвердить пароль" required>
+                <label for="password2">Подтвердить пароль</label>
+              </div>
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" id="signupBtn"
+                      type="button">Зарегистрироваться</button>
+              <hr class="my-4">
+            </form>
+            <a type="button" class="btn btn-lg btn-outline-secondary btn-block text-uppercase"
+               href="{% url 'signin' %}">Войти</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  </div>
+  <script>
+  // Отправляет данные пользователя в бекенд и при успехе возвращает html с формой для подтверждения
+  // кода, иначе возвращает сообщение об ошибке
+
+  var signup_url = "{% url 'signup' %}"
+
+  $(document).on("click", "#signupBtn", function(e) {
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: signup_url,
+      data: {
+        "phone_number": $("#phone_number").val(),
+        "first_name": $("#first_name").val(),
+        "last_name": $("#last_name").val(),
+        "password1": $("#password1").val(),
+        "password2": $("#password2").val(),
+      },
+      success: function(data) {
+        if (data.success) {
+          $("#formContainer").html(data.success);
+        } else {
+          alert(data.error);
+        }
+      },
+      error: function(data) {
+        alert("Упс, что-то пошло не так");
+      }
+    });
+  });
+  </script>
+  {% include 'users/scripts_for_code.html' %}
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container">
+
+
+            <h2> г. Сургут </h2>
+            <h3 style="color: white">Электроника для рыбалки и туризма</h3>
+
+        </div>
+    </section><!-- End Hero -->
+
+<div class="content">
+    <!-- ======= Home Product Section ======= -->
+    <section id="products" class="products">
+        <div class="box" >
+
+            <div class="section-title">
+                <h2>Товары</h2>
+                <p>Наличие товара уточняйте у оператора</p></div>
+
+            <!-- ======= Product Section ======= -->
+
+            <div class="container-fluid" >
+                <div class="row">
+                    {% for category in categories_products %}
+                        <div class="сol-xl-2 col-lg-3 col-md-4 col-sm-6">
+                            <div class="xbox_card box-shadow products-item filter-app">
+                                <div class="card-title">{{ category.title }}</div>
+                                <div class="products-img"><a href="{{ category.get_absolute_url }}"><img
+                                        src="{{ category.main_image.url }}" loading="lazy"
+                                        class="img-fluid" alt="" style=""></a></div>
+                                <div class="products-info">
+                                    <h4>{{ category.product_set.first.title }}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- End Products Section -->
+
+        </div>
+    </section>
+</div>
+    <!-- End Home Products Section -->
+
+
+{% endblock %}

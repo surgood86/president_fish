@@ -1,0 +1,37 @@
+{% load static %}
+
+
+
+{% for product in products %}
+    <div class="col-sm-4 my-2">
+        <div class="card text-center" style="height: 520px;">
+
+            <div class="card-body">
+                <div class="">
+                    <a href="{{ product.get_absolute_url }}" class="my-1">
+                        {% if not product.productimages_set.first.image %}
+                            <img class="card-img-top my-1 mx-1 img-fluid"
+                                 src="{% static 'images/no-image_230x190.png' %}">
+                        {% else %}
+                            <img class="card-img-top my-1 mx-1 img-fluid" loading="lazy"
+                                 src="{{ product.productimages_set.first.image.url }}"
+                                 style="height: 200px; width: auto;">
+                        {% endif %}
+                    </a>
+                </div>
+                <div class="row align-items-center" style="height: 100px;">
+                    <a href="{{ product.get_absolute_url }}" class="text-decoration-none"
+                       style="font-size: 14px;"><p class="text-center">{{ product.title }}</p></a>
+                </div>
+                <p class="" style="font-size: 12px;">{{ product.category.title }}</p>
+                <p class="">{{ product.manufacturer }}</p>
+                <h5 class="card-text" style="color: red;">{{ product.price }} p.</h5>
+            </div>
+
+            <div class="card-footer">
+                {% include 'basket.html' %}
+            </div>
+        </div>
+    </div>
+{% endfor %}
+

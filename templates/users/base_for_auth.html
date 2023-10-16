@@ -1,0 +1,45 @@
+{% load static %}
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Ajax csrf token settings -->
+    <script src="{% static 'js/ajax_csrf_token.js' %}"></script>
+
+    <!-- Mask for phone number input -->
+    <script src="{% static 'users/js/maskedinput.js' %}"></script>
+    <script src="{% static 'users/js/jquery.maskedinput.min.js' %}"></script>
+
+    <!-- Bootstrap4 Style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+    <!-- Local static -->
+    <link rel="stylesheet" href="{% static 'users/css/auth.css' %}">
+
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet" href="{% static 'fontawesome-free-5.15.3-web/css/fontawesome.min.css' %}">
+
+    <!-- Title -->
+    <title>{% block title %}Auth{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+
+    <!-- Bootstrap5 Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script></body>
+
+</body>
+</html>

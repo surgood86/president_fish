@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="82ae647e-157f-431d-a552-4a1f5ea45cc9" name="Changes" comment="code optimization">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="surgood86/main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;surgood86&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="97c4f5b6-2877-480b-9f5f-3ed95e49a059" />
+        <option name="url" value="https://github.com/surgood86/president_fish" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/venv/.gitignore" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="president_fish/invalid/Python facet" />
+    </ignored-facets>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2GAopSTATydQZad7adjQKbxfOe6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/timur/PycharmProjects/president_fish&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ],
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;GitIgnore&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/products" />
+      <recent name="$PROJECT_DIR$/static/media" />
+      <recent name="$PROJECT_DIR$/staticfiles/media" />
+      <recent name="$PROJECT_DIR$/products/parsers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/products" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Test2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.T-Set">
+    <configuration name="T-Set" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="president_fish" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/products" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/products/T-Set.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="async_parse" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="president_fish" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/products/parsers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/products/parsers/async_parse.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="products_services" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="president_fish" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/services" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/services/products_services.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="president_fish" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/categories" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/categories/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="president_fish" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/products" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/products/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.T-Set" />
+      <item itemvalue="Python.products_services" />
+      <item itemvalue="Python.async_parse" />
+      <item itemvalue="Python.tests (1)" />
+      <item itemvalue="Python.tests" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.T-Set" />
+        <item itemvalue="Python.tests" />
+        <item itemvalue="Python.tests (1)" />
+        <item itemvalue="Python.products_services" />
+        <item itemvalue="Python.async_parse" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="82ae647e-157f-431d-a552-4a1f5ea45cc9" name="Changes" comment="" />
+      <created>1665840932185</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665840932185</updated>
+      <workItem from="1665840935855" duration="7107000" />
+      <workItem from="1665905218788" duration="170000" />
+      <workItem from="1665908946913" duration="1140000" />
+      <workItem from="1665910097390" duration="74000" />
+      <workItem from="1665910181788" duration="289000" />
+      <workItem from="1665910481661" duration="409000" />
+      <workItem from="1665910899608" duration="801000" />
+      <workItem from="1665916165588" duration="4772000" />
+      <workItem from="1665936564005" duration="3056000" />
+      <workItem from="1666004363615" duration="5608000" />
+      <workItem from="1666015025839" duration="697000" />
+      <workItem from="1666168737317" duration="583000" />
+      <workItem from="1666183313228" duration="2537000" />
+      <workItem from="1666187282346" duration="1730000" />
+      <workItem from="1666258456083" duration="923000" />
+      <workItem from="1666335081058" duration="599000" />
+      <workItem from="1666360259174" duration="4910000" />
+      <workItem from="1666421046507" duration="3303000" />
+      <workItem from="1666441468311" duration="856000" />
+      <workItem from="1666447252865" duration="1799000" />
+      <workItem from="1666516007478" duration="8732000" />
+      <workItem from="1666530202699" duration="5594000" />
+      <workItem from="1666547046635" duration="2941000" />
+      <workItem from="1666682212669" duration="1976000" />
+      <workItem from="1666856906304" duration="23982000" />
+      <workItem from="1666959756601" duration="3228000" />
+      <workItem from="1667037547222" duration="15813000" />
+      <workItem from="1667131533402" duration="2373000" />
+      <workItem from="1667199471746" duration="5424000" />
+      <workItem from="1667311733498" duration="599000" />
+      <workItem from="1667463813815" duration="4765000" />
+      <workItem from="1667471403413" duration="2679000" />
+      <workItem from="1667481353512" duration="11959000" />
+      <workItem from="1667549738072" duration="7081000" />
+      <workItem from="1667724157053" duration="630000" />
+      <workItem from="1667725042117" duration="5394000" />
+      <workItem from="1667738585584" duration="8365000" />
+      <workItem from="1667747547584" duration="792000" />
+      <workItem from="1667748349709" duration="1394000" />
+      <workItem from="1667757525826" duration="1882000" />
+      <workItem from="1667760118135" duration="8570000" />
+      <workItem from="1667814572374" duration="2441000" />
+      <workItem from="1667825582091" duration="1935000" />
+      <workItem from="1668000996271" duration="937000" />
+      <workItem from="1668075969787" duration="13123000" />
+      <workItem from="1668359246113" duration="8915000" />
+      <workItem from="1668413091906" duration="5046000" />
+      <workItem from="1668690633080" duration="2334000" />
+      <workItem from="1668752099059" duration="15183000" />
+      <workItem from="1668859857131" duration="5763000" />
+      <workItem from="1668939606038" duration="7182000" />
+      <workItem from="1668970359800" duration="778000" />
+      <workItem from="1669016753489" duration="17561000" />
+      <workItem from="1669112163444" duration="19280000" />
+      <workItem from="1669194152955" duration="3118000" />
+      <workItem from="1669225665399" duration="5813000" />
+      <workItem from="1669281294318" duration="8597000" />
+      <workItem from="1669373154079" duration="3913000" />
+      <workItem from="1669554542964" duration="7233000" />
+      <workItem from="1669643559167" duration="2871000" />
+      <workItem from="1669801278708" duration="1232000" />
+      <workItem from="1669896345792" duration="1090000" />
+      <workItem from="1670081794546" duration="2252000" />
+      <workItem from="1670166933876" duration="1431000" />
+      <workItem from="1670423402787" duration="5181000" />
+      <workItem from="1670438816913" duration="3785000" />
+      <workItem from="1670600452476" duration="1693000" />
+      <workItem from="1676653525669" duration="2111000" />
+      <workItem from="1676701007001" duration="17395000" />
+      <workItem from="1676795300337" duration="4139000" />
+      <workItem from="1676813581669" duration="599000" />
+      <workItem from="1676874162213" duration="599000" />
+      <workItem from="1676900894640" duration="1491000" />
+      <workItem from="1676967858305" duration="2071000" />
+      <workItem from="1677062549897" duration="1894000" />
+      <workItem from="1678283403096" duration="3613000" />
+      <workItem from="1678433086648" duration="7835000" />
+      <workItem from="1678541039425" duration="3015000" />
+      <workItem from="1678604994830" duration="5813000" />
+      <workItem from="1678638521403" duration="4537000" />
+      <workItem from="1678697712650" duration="9780000" />
+      <workItem from="1678773245946" duration="8852000" />
+      <workItem from="1678863882231" duration="735000" />
+      <workItem from="1678865601676" duration="1256000" />
+      <workItem from="1678883953391" duration="1379000" />
+      <workItem from="1678958920922" duration="1219000" />
+      <workItem from="1679038029889" duration="610000" />
+      <workItem from="1679054631618" duration="2278000" />
+      <workItem from="1679076849871" duration="2639000" />
+      <workItem from="1679120799340" duration="605000" />
+      <workItem from="1679215853741" duration="1337000" />
+      <workItem from="1679244524739" duration="1844000" />
+      <workItem from="1679305524844" duration="599000" />
+      <workItem from="1679387187528" duration="5115000" />
+      <workItem from="1679662050764" duration="383000" />
+      <workItem from="1679662935804" duration="61000" />
+      <workItem from="1679663585711" duration="1202000" />
+      <workItem from="1679686515622" duration="175000" />
+      <workItem from="1692633676669" duration="2444000" />
+      <workItem from="1692690950938" duration="1827000" />
+      <workItem from="1692782663824" duration="609000" />
+      <workItem from="1692794566100" duration="1008000" />
+      <workItem from="1692943185742" duration="68000" />
+      <workItem from="1692943260434" duration="1762000" />
+      <workItem from="1693398217338" duration="20000" />
+      <workItem from="1693403899195" duration="692000" />
+      <workItem from="1693469568921" duration="42000" />
+      <workItem from="1693476071199" duration="1735000" />
+      <workItem from="1693830168818" duration="5208000" />
+      <workItem from="1693915021845" duration="5240000" />
+      <workItem from="1694004539023" duration="2492000" />
+      <workItem from="1694026135099" duration="1674000" />
+      <workItem from="1694067505994" duration="6203000" />
+      <workItem from="1694105557212" duration="1919000" />
+      <workItem from="1694169644296" duration="1209000" />
+      <workItem from="1694247792714" duration="10366000" />
+      <workItem from="1694335860569" duration="11866000" />
+      <workItem from="1694432394559" duration="5509000" />
+      <workItem from="1694502053570" duration="14285000" />
+      <workItem from="1694596295001" duration="3667000" />
+      <workItem from="1694609569539" duration="2873000" />
+      <workItem from="1694681243859" duration="16048000" />
+      <workItem from="1694782709554" duration="21000" />
+      <workItem from="1694782741831" duration="8389000" />
+      <workItem from="1694935779953" duration="4394000" />
+      <workItem from="1695015547287" duration="8658000" />
+      <workItem from="1695037198798" duration="6375000" />
+      <workItem from="1695103386101" duration="5126000" />
+      <workItem from="1695187998182" duration="599000" />
+      <workItem from="1695206748028" duration="3567000" />
+      <workItem from="1695303469748" duration="3484000" />
+      <workItem from="1695362590920" duration="5268000" />
+      <workItem from="1695384565771" duration="604000" />
+      <workItem from="1695386534234" duration="2907000" />
+      <workItem from="1695404753380" duration="1400000" />
+      <workItem from="1695453838576" duration="19252000" />
+      <workItem from="1695550867067" duration="3191000" />
+      <workItem from="1695585757613" duration="2572000" />
+      <workItem from="1695630358453" duration="6958000" />
+      <workItem from="1695723720785" duration="260000" />
+      <workItem from="1695723990861" duration="3798000" />
+      <workItem from="1696603344869" duration="1800000" />
+      <workItem from="1696606744697" duration="602000" />
+      <workItem from="1696773866845" duration="2039000" />
+      <workItem from="1697381685287" duration="247000" />
+      <workItem from="1697388627658" duration="621000" />
+      <workItem from="1697455149720" duration="609000" />
+      <workItem from="1697459836965" duration="523000" />
+    </task>
+    <task id="LOCAL-00001" summary="Site is working v1">
+      <created>1667832761268</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667832761268</updated>
+    </task>
+    <task id="LOCAL-00002" summary="code optimization">
+      <option name="closed" value="true" />
+      <created>1697457693628</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697457693628</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="surgood86/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Site is working v1.1" />
+    <MESSAGE value="Site is working v1" />
+    <MESSAGE value="code optimization" />
+    <option name="LAST_COMMIT_MESSAGE" value="code optimization" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/president_fish$models.coverage" NAME="models Coverage Results" MODIFIED="1667050773910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/products" />
+    <SUITE FILE_PATH="coverage/president_fish$async_get_links.coverage" NAME="async_get_links Coverage Results" MODIFIED="1676738456889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/products/parsers" />
+    <SUITE FILE_PATH="coverage/president_fish$manufacturers_parser.coverage" NAME="manufacturers_parser Coverage Results" MODIFIED="1666528090756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/categories/parsers" />
+    <SUITE FILE_PATH="coverage/president_fish$update_products.coverage" NAME="update_products Coverage Results" MODIFIED="1667114521243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/products/management/commands" />
+    <SUITE FILE_PATH="coverage/president_fish$categories_parser.coverage" NAME="categories_parser Coverage Results" MODIFIED="1667488961061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/categories/parsers" />
+    <SUITE FILE_PATH="coverage/president_fish$tests.coverage" NAME="tests Coverage Results" MODIFIED="1695557944836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/products" />
+    <SUITE FILE_PATH="coverage/president_fish$products_parser__1_.coverage" NAME="products_parser (1) Coverage Results" MODIFIED="1666517425999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/parsers_1" />
+    <SUITE FILE_PATH="coverage/president_fish$1.coverage" NAME="1 Coverage Results" MODIFIED="1667050755787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/products/parsers" />
+    <SUITE FILE_PATH="coverage/president_fish$products_parser.coverage" NAME="products_parser Coverage Results" MODIFIED="1670441408611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/products/parsers" />
+    <SUITE FILE_PATH="coverage/president_fish$async_parse__1_.coverage" NAME="async_parse (1) Coverage Results" MODIFIED="1666187317641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/parsers_original" />
+    <SUITE FILE_PATH="coverage/president_fish$tests__1_.coverage" NAME="tests (1) Coverage Results" MODIFIED="1695375178431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/categories" />
+    <SUITE FILE_PATH="coverage/president_fish$tests222.coverage" NAME="T-Set Coverage Results" MODIFIED="1695726701099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/products" />
+    <SUITE FILE_PATH="coverage/president_fish$categories_set_main_images.coverage" NAME="categories_set_main_images Coverage Results" MODIFIED="1666528743416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/services" />
+    <SUITE FILE_PATH="coverage/president_fish$Parser.coverage" NAME="Parser Coverage Results" MODIFIED="1666185492294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
+    <SUITE FILE_PATH="coverage/president_fish$Test.coverage" NAME="Test Coverage Results" MODIFIED="1666882917560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
+    <SUITE FILE_PATH="coverage/president_fish$products_services.coverage" NAME="products_services Coverage Results" MODIFIED="1695375145128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/services" />
+    <SUITE FILE_PATH="coverage/president_fish$s.coverage" NAME="s Coverage Results" MODIFIED="1666538469341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/categories/parsers" />
+    <SUITE FILE_PATH="coverage/president_fish$async_parse.coverage" NAME="async_parse Coverage Results" MODIFIED="1676748937639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/products/parsers" />
+  </component>
+</project>
